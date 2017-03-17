@@ -1,0 +1,39 @@
+cxx_binary(
+  name = 'sio_list_devices',
+  srcs = [
+    'sio_list_devices.c',
+  ],
+  deps = [
+    '//:libsoundio',
+  ],
+)
+
+cxx_binary(
+  name = 'sio_microphone',
+  srcs = [
+    'sio_microphone.c',
+  ],
+  deps = [
+    '//:libsoundio',
+  ],
+)
+
+cxx_binary(
+  name = 'sio_record',
+  srcs = [
+    'sio_record.c',
+  ],
+  deps = [
+    '//:libsoundio',
+  ],
+)
+
+cxx_binary(
+  name = 'sio_sine',
+  srcs = [
+    'sio_sine.c',
+  ],
+  deps = [
+    '//:libsoundio',
+  ],
+)
