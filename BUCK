@@ -36,6 +36,11 @@ macos_exported_linker_flags = [
   '-framework', 'CoreFoundation',
 ]
 
+linux_exported_linker_flags = [
+  '-lpthread',
+  '-lpulse'
+]
+
 linux_sources = [
   'src/pulseaudio.c',
 ]
@@ -85,6 +90,7 @@ cxx_library(
   ],
   exported_platform_linker_flags = [
     ('default', macos_exported_linker_flags),
+    ('^linux', linux_exported_linker_flags),
     ('^macos.*', macos_exported_linker_flags),
   ],
   visibility = [
